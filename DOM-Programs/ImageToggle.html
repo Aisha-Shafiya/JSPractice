@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image</title>
+    <style>
+        body {
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensures body takes full height of the viewport */
+            margin: 0; 
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: auto;
+        }
+        .buttons {
+            padding: 30px;
+            background-color: bisque;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 4px 4px 10px 5px #ded6d6;
+            border-radius: 10px;
+        }
+        .buttons:hover {
+            cursor: pointer;
+            font-size: 25px;
+            background-color: #ded6d6;
+        }
+        .container img {
+            width: 200px;
+            height: 200px;
+            display: none; /* Hide image by default */
+        }
+        .container .active {
+            display: block; /* Show image when active class is added */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="buttons" id="buttons">Toggle Image</button>
+        <img id="imageClick" src="1.jpg" alt="Image">
+    </div>
+
+    <script>
+        const buttons = document.querySelector('#buttons');
+        const image = document.querySelector('#imageClick');
+
+        const toggleImage = () => {
+            image.classList.toggle('active');
+        }
+
+        buttons.addEventListener('click', toggleImage);
+    </script>
+</body>
+</html>
+toggleButton.addEventListener('click', () => {
+    // Check the current display property of the image
+    if (image.style.display === 'none') {
+        // If it's 'none', set it to 'block' to show the image
+        image.style.display = 'block';
+    } else {
+        // Otherwise, set it to 'none' to hide the image
+        image.style.display = 'none';
+    }
+});

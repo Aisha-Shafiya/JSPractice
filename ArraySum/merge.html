@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Array</title>
+</head>
+<body>
+    <script>
+        const arr1 = ["Cecilie", "Lone", "linus", "Boy", "Girl"];
+const arr2 = ["Emil", "Tobias", "Linus","Boy", "Girl"];
+const children = arr1.concat(arr2);
+console.log(children);
+
+
+      function RemoveDup(arr) {
+        // let unique = [];
+        // arr.forEach(element => {
+        //     if(!unique.includes(element)){
+        //         unique.push(element);
+        //     }
+        // });
+        // return unique;
+
+
+        //  return[...new Set(arr)];
+
+
+        return arr.filter((item, index) => arr.indexOf(item) === index)
+
+      }
+      console.log(RemoveDup(children));
+      
+    </script>
+</body>
+</html>

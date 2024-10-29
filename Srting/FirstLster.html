@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function capitalizeLetter(str){
+
+        const words = str.split(' ');
+
+        const capitalWords = words.map(word => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+
+        return capitalWords.join(' ')
+    }
+
+    const inputString = "hello world from javascript";
+const result = capitalizeLetter(inputString);
+console.log(result);
+</script>
+</html>

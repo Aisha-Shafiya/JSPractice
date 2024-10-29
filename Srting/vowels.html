@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function includeVowels(str){
+        let string = str.toLowerCase();
+
+        let vowels = 'aeiou';
+
+        let count = 0;
+
+        for(let i = 0; i < string.length; i++){
+            if(vowels.includes(string[i])){
+                count++;
+            }
+        }
+        return count;
+    }
+
+const word =  includeVowels('peiututjnvfssaaaa');
+console.log("The count of vowels is ", word);
+
+    
+</script>
+</html>

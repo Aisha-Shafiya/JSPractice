@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myform input[type ='text']{
+            padding: 20px;
+            color: black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="myform">
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+    document.getElementById('myform').addEventListener('submit', function(){
+        event.preventDefault();
+        const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if(!name){
+        alert('Please Fill out your name');
+        return;
+    }
+    if (!email) {
+        alert("Please fill out your email.");
+        return;
+    }
+    if (!message) {
+        alert("Please fill out your message.");
+        return;
+    }
+
+    // If all fields are filled, you can submit the form or perform other actions
+    alert("Form submitted successfully!");
+    })
+</script>
+</html>

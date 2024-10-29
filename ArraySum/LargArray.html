@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function findLargestNumber(arr) {
+  if (arr.length === 0) {
+    return "Array is empty";
+  }
+  
+  let largest = arr[0]; // Assume the first element is the largest
+  
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i]; // Update largest if the current element is larger
+    }
+  }
+  
+  return largest;
+}
+
+// Example usage
+const numbers = [10, 45, 78, 23, 56, 89, 12];
+console.log("The largest number is: " + findLargestNumber(numbers));
+
+</script>
+</html>

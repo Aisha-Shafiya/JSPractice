@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text</title>
+</head>
+<style>
+    body{
+        margin: 20px;
+        padding: 30px;
+        background-color: black;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(95, 59, 12);
+        flex-direction: column;
+        padding: 40px;
+    }
+    .demo{
+        font-size: large;
+        font-weight: 700;
+        font-style: normal;
+        color: aliceblue;
+    }
+    .buttons{
+        padding: 20px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: antiquewhite;
+        color: black;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    .buttons:hover{
+       background-color: #ddd;
+    }
+</style>
+<body>
+    <div class="container">
+
+        <p id="demo" class="demo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, esse.
+        </p>
+
+        <button class="buttons" id="button">Click Me For Magic!!!</button>
+    </div>
+</body>
+<script>
+   const text = document.getElementById('demo');
+   const buttons = document.getElementById('button');
+   
+   buttons.addEventListener('click', ()=> {
+    text.textContent = "Hi, Good Morning Aisha Shafiya"
+   })
+
+ const autoplay = setInterval(()=>{
+    text.style.fontSize = '45px'
+    text.textContent = "Hi, Good Morning Aisha Shafiya"
+ },3000)
+   
+//  clearInterval(autoplay)
+
+</script>
+</html>

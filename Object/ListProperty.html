@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const studentOne = {
+        username : "aisha",
+        age : 89,
+        grade : 'A'
+    };
+    for(const key in studentOne){
+   console.log('The properties are :' + key + ' -> ' + studentOne[key]);
+   
+    }
+</script>
+<script>
+    function listObjectProperties(obj) {
+    return Object.keys(obj);
+}
+
+// Example usage
+const studentOnet = {
+    username: "aisha",
+    age: 89,
+    grade: 'A'
+};
+
+console.log(listObjectProperties(studentOnet));
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let Arr = [50, 60, 90, 48, 10];
+    Arr.sort((a,b) => a - b);
+    let minValue = Arr[0];
+
+    Arr.sort((a, b) => b - a);
+    let maxValue = Arr[0]; 
+
+    // console.log("Minimum val is " + minValue);
+    // console.log("Maximum Element is:" + maxValue);
+
+  let Arr1 = [50, 60, 90, 48, 10];
+  let minVal = Infinity;
+  let maxVal = -Infinity;
+
+  for(let item of Arr1){
+    if ( item < minVal)
+    minVal = item;
+
+    if(item > maxVal)
+    maxVal = item;
+  }
+
+  console.log("Minimum element is:" + minVal);
+  console.log("Minimum element is:" + maxVal);
+
+</script>
+</html>

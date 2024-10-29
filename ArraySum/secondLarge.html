@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Largest Value</title>
+</head>
+<body>
+    <script>
+      function SecondLargest(arr){
+        let first = -Infinity; second = -Infinity;
+
+        for(let num of arr){
+            if (num > first){
+                second = first;
+                first = num;
+
+            }
+
+            else if(num > second && num < first){
+                second = num;
+            }
+
+        }
+        return second;
+      }
+
+      let arr =[1, 2, 3, 4, 5];
+      console.log("The second largest slement is : " + SecondLargest(arr));
+      
+    // Second method
+    function findSecondLargest(arr){
+        const uniqueElement = new Set(arr);
+          if(uniqueElement.size < 2){
+            return "No second largest element exist";
+          }
+          const sortedElement = Array.from(uniqueElement).sort((a,b) => a - b)
+       return "The second largest element is " + sortedElement[sortedElement.length-2];
+
+        }
+        const numbers = [12, 35, 35, 2, 10, 10, 34, 12];
+        console.log( findSecondLargest(numbers));
+        
+
+        // Third method
+
+        function findSecond(arr){
+            if(arr.length < 2){
+                return 'Invalid Input';
+            }
+            arr.sort();
+
+            // for(let i = arr.length-2; i >= 0; i--){
+            //     if(arr[i]!== arr[arr.length-1]){
+            //         return "The second largest element is " + arr[i];
+            //     }
+            // }
+            // return "There is no second largest element";
+            for (let i = 1; i < arr.length; i++){
+                if(arr[i]!== arr[arr.length + 1]){
+                    return "The second smallest element is "+ arr[i]
+                }
+            }
+            return "There is no second largest element";
+        }
+        const arr1 = [12, 35, 10, 35, 10, 34, 1];
+
+// Output: The second largest element is 34
+console.log(findSecond(arr1)); 
+    </script>
+</body>
+</html>

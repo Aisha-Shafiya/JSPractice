@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+  function countDuplicates(arr){
+    let dublicates = 0;
+    let elementCount = new Map();
+
+    for(let i = 0; i < arr.length; i++){
+        elementCount.set(arr[i], (elementCount.get(arr[i]) || 0 ) + 1 );
+    }
+    for(let [key , value] of elementCount){
+        if( value > 1){
+            dublicates++;
+        }
+    }
+    return dublicates
+  }
+   const numbers  = [1, 2, 3, 4, 2, 5, 6, 3, 7, 8, 1];
+   console.log("Number of duplicate elements: " + countDuplicates(numbers));
+    
+</script>
+</html>

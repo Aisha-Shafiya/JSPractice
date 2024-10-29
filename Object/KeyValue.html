@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        studentThree = {
+            "Firstname" : 'Aisha',
+            LastName : "shafiya",
+            ages : 99
+        };
+
+        console.log(studentThree["Firstname"]);
+        
+    </script>
+</body>
+<script>
+    function studentOne(obj,key){
+        if(key in obj){
+            return obj[key];
+        }
+        else {
+            return "Key not found"
+        }
+    }
+    const studentTwo = {
+        username : 'Aisha',
+        age : 99,
+        grade : 'A'
+    };
+    console.log(studentOne(studentTwo, 'grade'));
+    
+</script>
+
+</html>
